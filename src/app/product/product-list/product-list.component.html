@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">STT</th>
+    <th scope="col">Tên</th>
+    <th scope="col">Gía</th>
+    <th scope="col">Mô Tả</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let p of products; index as i">
+    <th scope="row">{{i+1}}</th>
+    <td>{{p.name}}</td>
+    <td>{{p.price}}</td>
+    <td>{{p.description}}</td>
+    <td [routerLink]="['/edit',p.id]"><button type="button" class="btn btn-primary">edit</button></td>
+    <td [routerLink]="['/delete',p.id]"><button type="button" class="btn btn-primary">delete</button></td>
+  </tr>
+  </tbody>
+</table>
